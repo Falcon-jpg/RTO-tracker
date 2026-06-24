@@ -424,7 +424,7 @@
     var t=new Date();
     var hr=t.getHours();
     var greet=hr<12?"Good morning":hr<17?"Good afternoon":"Good evening";
-    var opts=[["wfo","In office","🏢","var(--wfo)"],["wfh","From home","🏠","var(--wfh)"],["leave","On leave","🌴","var(--leave)"]];
+    var opts=[["wfo","From office","🏢","var(--wfo)"],["wfh","From home","🏠","var(--wfh)"],["leave","On leave","🌴","var(--leave)"]];
     var html='<div class="modal"><h3>'+greet+", "+escapeHtml(settings.name)+'!</h3><p class="sub">Where are you working from today?</p><div class="opts">';
     opts.forEach(function(o){ html+='<button data-st="'+o[0]+'"><span class="mic" style="background:'+o[3]+'">'+o[2]+'</span>'+o[1]+'</button>'; });
     html+='</div><div class="foot"><button class="dont">Don\u2019t ask me again</button><button class="skip">Skip for today</button></div></div>';
